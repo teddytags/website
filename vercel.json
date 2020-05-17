@@ -1,16 +1,7 @@
 {
+  "version": 2,
   "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/repl", "dest": "/index.html" },
-    { "src": "/docs", "dest": "/index.html" },
-    { "src": "/docs/.*", "dest": "/index.html" },
-    { "src": "/blog", "dest": "/index.html" },
-    { "src": "/blog/.*", "dest": "/index.html" },
-    {
-      "src": "/service-worker.js",
-      "dest": "/service-worker.js",
-      "headers": { "cache-control": "no-cache" }
-    },
-    { "src": "/(.+)", "dest": "/$1" }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
