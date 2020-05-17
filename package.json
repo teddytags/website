@@ -98,7 +98,7 @@
     "parcel-plugin-sw-precache": "^1.1.2"
   },
   "scripts": {
-    "build": "parcel build src/index.html -d build || node -e 'process.exit(0)'",
+    "build": "parcel build src/index.html -d build && node build-utils/create404.mjs",
     "dev": "parcel src/index.html --port 1300",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
