@@ -1,5 +1,5 @@
 import * as teddy from "teddytags";
-import Editor from "components/Editor/Editor";
+import Editor from "components/Editor/editor";
 import Navbar from "components/Navbar/Navbar";
 import "bootstrap";
 import "./repl.css";
