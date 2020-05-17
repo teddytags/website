@@ -6,7 +6,7 @@ import "codemirror/mode/htmlmixed/htmlmixed";
 import "codemirror/mode/jsx/jsx";
 import "codemirror/mode/css/css";
 import "codemirror/mode/javascript/javascript";
-import "codemirror/addon/display/autorefresh";
+import "codemirror/addon/display/autorefresh"
 export default class Editor extends teddy.Component {
   constructor(props) {
     super(props);
