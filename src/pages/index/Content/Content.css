@@ -1,0 +1,34 @@
+.content {
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+.CodeMirror pre {
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.npm-count {
+  font-family: Consolas, Monaco, monospace !important;
+  background: #743c1b6b;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+}
+h1.td-title {
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 300;
+}
+h1.td-lead {
+  font-size: calc(1.275rem + 0.3vw);
+  font-weight: 200;
+}
+h2.td-lead, p.stats {
+  font-size: calc(1.75rem + 0.3vw);
+  font-weight: 300;
+}
+.hero-head h1 {
+  font-size: calc(2.5rem + 2.1vw);
+  font-weight: 300;
+}
+.td-light {
+  font-weight: 300;
+}

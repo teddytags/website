@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "shared-node-browser": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": ["babel", "@teddytags"],
+  "extends": ["eslint:recommended", "plugin:@teddytags/recommended"],
+  "rules": {
+    "no-console": 0
+  }
+}

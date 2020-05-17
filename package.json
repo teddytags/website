@@ -1,0 +1,110 @@
+{
+  "name": "teddytags-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.9.6",
+    "@babel/standalone": "^7.9.6",
+    "@teddytags/router": "^1.0.0",
+    "anchor-js": "^4.2.2",
+    "bootstrap": "^4.5.0",
+    "codemirror": "^5.53.2",
+    "core-js": "^3.6.5",
+    "docsearch.js": "^2.6.3",
+    "jquery": "^3.5.1",
+    "js-cookie": "^2.2.1",
+    "marked": "^1.0.0",
+    "popper.js": "^1.16.1",
+    "prismjs": "^1.20.0",
+    "teddytags": "^2.0.1",
+    "tocbot": "^4.11.1",
+    "unfetch": "^4.1.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "alias": {
+    "components": "./src/components",
+    "app": "./src",
+    "assets": "./src/assets"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "public",
+      "src/static"
+    ],
+    "watcherGlob": "**"
+  },
+  "sw-precache": {
+    "navigateFallback": "/",
+    "cacheId": "app-cache",
+    "skipWaiting": true,
+    "minify": true
+  },
+  "pwaManifest": {
+    "production": {
+      "name": "TeddyTags Website",
+      "shortName": "TeddyTags",
+      "startURL": "./",
+      "theme": "#743c1b",
+      "generateIconOptions": {
+        "baseIcon": "./public/logo.svg",
+        "sizes": [
+          192,
+          384,
+          512
+        ],
+        "genFavicons": true
+      }
+    },
+    "development": {
+      "name": "TeddyTags Website",
+      "shortName": "TeddyTags App",
+      "startURL": "./",
+      "theme": "#743c1b",
+      "generateIconOptions": {
+        "baseIcon": "./public/logo.svg",
+        "disabled": true
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@teddytags/eslint-plugin": "^1.0.1",
+    "babel-eslint": "^10.1.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^7.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "gh-pages": "2.2.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-compress": "^2.0.2",
+    "parcel-plugin-eslint": "^1.0.7",
+    "parcel-plugin-inlinesvg": "^0.1.1",
+    "parcel-plugin-pwa-manifest": "^3.0.6",
+    "parcel-plugin-static-files-copy": "^2.3.1",
+    "parcel-plugin-sw-precache": "^1.1.2"
+  },
+  "scripts": {
+    "build": "parcel build src/index.html -d build || node -e 'process.exit(0)'",
+    "dev": "parcel src/index.html --port 1300",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "lint": "eslint src --ext .js,jsx,ts,tsx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

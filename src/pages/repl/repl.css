@@ -1,0 +1,29 @@
+.tab-content {
+  height: inherit;
+}
+.row {
+  margin: 0 !important;
+}
+.editors,
+.outputs {
+  padding: 0 !important;
+}
+#nav-html,
+#nav-css,
+#nav-js {
+  height: calc(100% - 42px);
+  width: 100% !important;
+}
+.CodeMirror {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+#output {
+  height: calc(100% - 42px);
+  width: 100% !important;
+  border: 1px solid #dee2e6;
+  border-top: 0px;
+  border-radius: 3px;
+  padding: 0px !important;
+}
