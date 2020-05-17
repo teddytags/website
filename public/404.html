@@ -3,17 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="An awesome app made with TeddyTags" />
     <title>TeddyTags</title>
-    <script>
-      sessionStorage.redirect = location.href;
-      (function () {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
   </head>
-  <body></body>
+  <body>
+    <div id="app"></div>
+    <noscript>You need <b>JavaScript</b> to run this app.</noscript>
+    <script src="index.js"></script>
+  </body>
 </html>
