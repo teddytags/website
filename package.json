@@ -94,13 +94,11 @@
     "parcel-plugin-inlinesvg": "^0.1.1",
     "parcel-plugin-pwa-manifest": "^3.0.6",
     "parcel-plugin-static-files-copy": "^2.3.1",
-    "parcel-plugin-sw-precache": "^1.1.2",
-    "serve": "^11.3.0"
+    "parcel-plugin-sw-precache": "^1.1.2"
   },
   "scripts": {
     "build": "parcel build src/index.html -d build",
     "dev": "parcel src/index.html --port 1300",
-    "now-start": "serve -s build",
     "lint": "eslint src --ext .js,jsx,ts,tsx"
   },
   "keywords": [],
