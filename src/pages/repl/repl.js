@@ -25,14 +25,14 @@ export default class REPL extends teddy.Component {
     frame.innerHTML = `${values.html}<style>${values.css}</style>`;
     setTimeout(() => {
       import("@babel/standalone")
-        .then((e) => {
-          let code = e.transform(values.js, babelOpts).code;
+        .then((pkg) => {
+          let code = pkg.transform(values.js, babelOpts).code;
           new Function(code)();
         })
         .catch((e) => {
           let error = `<div id="error">
           <h1 style="color: red">${e.name}</h1>
-          <pre>${e.message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>
+          <pre style="background-color:inherit;">${e.message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>
           </div>`;
           setTimeout((frame.innerHTML = error), 1000);
         });
