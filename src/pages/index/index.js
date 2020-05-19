@@ -10,7 +10,7 @@ export default class App extends teddy.Component {
   }
   render() {
     return (
-      <main>
+      <main style={{ display: "flex", flexDirection: "column" }}>
         <Navbar activeLink="home" />
         <Content />
       </main>

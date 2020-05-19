@@ -5,10 +5,11 @@ import tocbot from "tocbot";
 import "tocbot/dist/tocbot.css";
 import AnchorJS from "anchor-js";
 import "assets/prism-oceanic.css";
-import "assets/oml.css";
+import "assets/fonts.css";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "components/Navbar/Navbar";
+import Footer from "components/Footer/Footer";
 import "components/Markdown/Markdown.css";
 import "components/Code/Code.css";
 import Markdown from "../../components/Markdown/Markdown";
@@ -57,7 +58,7 @@ export default class Docs extends teddy.Component {
   }
   render() {
     return (
-      <teddy.Fragment>
+      <article class="d-flex flex-column">
         <Navbar activeLink={this.props.activeLink || "docs"} />
         <style>{`.is-active-link::before {
         background-color: #743c1b !important;
@@ -69,7 +70,10 @@ export default class Docs extends teddy.Component {
         <div style={{ width: "88%" }} class="content float-left px-3 py-2 pt-3">
           <Markdown text={this.props.text} />
         </div>
-      </teddy.Fragment>
+        <div style={{ position: "relative", bottom: "0px" }}>
+          <Footer />
+        </div>
+      </article>
     );
   }
 }

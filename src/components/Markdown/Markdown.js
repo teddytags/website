@@ -3,7 +3,7 @@ import Prism from "prismjs";
 import "assets/prism-oceanic.css";
 import "components/Code/Code.css";
 import "./Markdown.css";
-import "assets/oml.css";
+import "assets/fonts.css";
 require("prismjs/components/prism-typescript");
 require("prismjs/components/prism-jsx");
 require("prismjs/components/prism-tsx");

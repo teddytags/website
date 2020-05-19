@@ -1,6 +1,7 @@
 import * as teddy from "teddytags";
 import Header from "components/Header/Header";
 import Code from "components/Code/Code";
+import Footer from "components/Footer/Footer";
 import "./Content.css";
 import AnchorJS from "anchor-js";
 export default class Content extends teddy.Component {
@@ -52,7 +53,10 @@ export default class Content extends teddy.Component {
           </p>
           <ul>
             <li class="lead">Defining a custom element</li>
-            <Code lang="js" code="new Tag('myCustomElement').set('h1')"></Code>
+            <Code
+              lang="js"
+              code="new Tag({name: 'myCustomElement', to: 'h1'})"
+            ></Code>
             <li class="lead">Defining an awesome Component</li>
             <Code
               lang="jsx"
@@ -84,6 +88,7 @@ export default class Content extends teddy.Component {
             <a href="/repl">REPL</a>.
           </p>
         </div>
+        <Footer />
       </article>
     );
   }

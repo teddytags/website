@@ -1,0 +1,12 @@
+.page-footer {
+  width: 100%;
+  margin-top: auto;
+  color: white;
+  background-color: #743c1b;
+}
+.page-footer .links {
+  width: calc(50% - 0.5rem);
+}
+.links a {
+  color: white !important;
+}

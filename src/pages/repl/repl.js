@@ -1,9 +1,10 @@
 import * as teddy from "teddytags";
 import Editor from "components/Editor/Editor";
 import Navbar from "components/Navbar/Navbar";
+import Footer from "components/Footer/Footer";
 import "bootstrap";
 import "./repl.css";
-import "assets/oml.css";
+import "assets/fonts.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Cookies from "js-cookie";
 const babelOpts = {
@@ -32,7 +33,9 @@ export default class REPL extends teddy.Component {
         .catch((e) => {
           let error = `<div id="error">
           <h1 style="color: red">${e.name}</h1>
-          <pre style="background-color:inherit;">${e.message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>
+          <pre style="background-color:inherit;">${e.message
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")}</pre>
           </div>`;
           setTimeout((frame.innerHTML = error), 1000);
         });
@@ -73,7 +76,7 @@ export default class REPL extends teddy.Component {
     return (
       <div style="width: 100%; height: 100vh">
         <Navbar activeLink="repl" />
-        <div class="pt-3 h-100 row">
+        <div class="pt-3 h-100 row d-flex flex-md-row flex-xs-column">
           <div class="editors col-md-6 h-100">
             <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -148,6 +151,7 @@ export default class REPL extends teddy.Component {
               ></div>
             </div>
           </div>
+          <Footer />
         </div>
       </div>
     );

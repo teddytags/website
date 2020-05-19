@@ -1,6 +1,6 @@
 import * as teddy from "teddytags";
 import "prismjs";
-import "assets/oml.css";
+import "assets/fonts.css";
 import "./Code.css";
 import "assets/prism-oceanic.css";
 import "prismjs/components/prism-bash";
