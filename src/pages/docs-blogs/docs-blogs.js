@@ -18,6 +18,9 @@ export default class Docs extends teddy.Component {
     super(props);
   }
   componentDidMount() {
+    document.querySelector(
+      ".page-footer"
+    ).style.marginTop = `${document.documentElement.scrollHeight}px`;
     document.querySelectorAll("pre").forEach((dom) => {
       let initialHTML = dom.outerHTML;
       dom.outerHTML = `<div id="codewrapper">
@@ -58,7 +61,7 @@ export default class Docs extends teddy.Component {
   }
   render() {
     return (
-      <article class="d-flex flex-column">
+      <article>
         <Navbar activeLink={this.props.activeLink || "docs"} />
         <style>{`.is-active-link::before {
         background-color: #743c1b !important;
@@ -67,12 +70,10 @@ export default class Docs extends teddy.Component {
           style={{ right: 0, width: "12%" }}
           className="toc position-fixed pt-3 d-none d-md-block"
         ></div>
-        <div style={{ width: "88%" }} class="content float-left px-3 py-2 pt-3">
+        <div style={{ width: "88%" }} class="float-left content px-3 py-2 pt-3">
           <Markdown text={this.props.text} />
         </div>
-        <div style={{ position: "relative", bottom: "0px" }}>
-          <Footer />
-        </div>
+        <Footer />
       </article>
     );
   }
