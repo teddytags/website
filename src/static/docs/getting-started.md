@@ -40,6 +40,16 @@ TeddyTags is also available on NPM and Yarn. To install TeddyTags, run one of th
 
 ---
 
+## Deno
+
+TeddyTags can be used in Deno as well, provided you use it in a browser using their server module.
+
+```ts
+import * as teddy from "https://deno.land/x/teddytags/src/index.ts";
+```
+
+---
+
 ## Pro Setup (or a template)
 
 This setup contains all the things a React, Angular or a Vue project has. It supports live reload, page configuration, highly optimized production builds via Parcel, and much more.

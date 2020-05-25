@@ -37,6 +37,7 @@ pre code {
   hyphens: none;
 }
 blockquote {
+  word-wrap: break-word;
   margin: 0;
   border-left: 5px solid #7a7a7a;
   padding: 1.33em;
