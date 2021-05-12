@@ -9,7 +9,7 @@
     "@teddytags/router": "^1.0.0",
     "anchor-js": "^4.2.2",
     "bootstrap": "^4.5.0",
-    "codemirror": "^5.53.2",
+    "codemirror": "^5.58.2",
     "core-js": "^3.6.5",
     "docsearch.js": "^2.6.3",
     "jquery": "^3.5.1",
